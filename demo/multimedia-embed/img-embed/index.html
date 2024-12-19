@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片嵌入练习</title>
+</head>
+
+<body>
+    <p>URL正确，正确显示恐龙图片</p>
+    <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+        alt="可以正确显示的恐龙图片" height="171px" width="200px" title="恐龙图片">
+    <p>URL错误，显示img的alt属性</p>
+    <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small123.jpg"
+        alt="不能正常显示的恐龙图片" height="171px" width="200px" title="恐龙图片">
+
+    <p>标准编写规范格式下的图片</p>
+    <figure>
+        <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+            alt="The head and torso of a dinosaur skeleton;
+                it has a large head with long sharp teeth" width="400" height="341" />
+
+        <!-- 图片下方的注解, 内容应该和title相近 -->
+        <figcaption>
+            A T-Rex on display in the Manchester University Museum.
+        </figcaption>
+    </figure>
+
+</body>
+
+</html>

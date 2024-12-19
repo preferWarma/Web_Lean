@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页内嵌音视频学习</title>
+</head>
+
+<body>
+    <p>以下是一段可以播放的视频</p>
+    <!-- 
+    controls: 浏览器自带的视频控制栏(暂停/播放， 全屏等) 【可以认为是必选】
+    width, height: 视频尺寸 
+    autoplay: 自动播放 【不建议】
+    loop: 结束时循环播放 【不建议】
+    muted: 默认静音
+    preload: 缓冲选项 "none"：不缓冲文件 "auto"：页面加载后缓存媒体文件 "metadata"：仅缓冲文件的元数据
+    poster: 指向了一个图像的 URL，这个图像会在视频播放前显示
+    -->
+    <video controls width="400px" height="400px" autoplay loop muted preload="auto" poster="assets/poster.png">
+        <source src="assets/rabbit320.mp4" type="video/mp4" />
+        <source src="assets/rabbit320.webm" type="video/webm" />
+        <p>你的浏览器不支持此视频。可点击<a href="assets/rabbit320.mp4">此链接</a>观看</p>
+    </video>
+
+    <p>以下是一段可播放的音频</p>
+    <!-- 可选属性除了不支持width/height和poster以外，与video一致 -->
+    <audio controls>
+        <source src="assets/viper.mp3" type="audio/mp3" />
+        <source src="assets/viper.ogg" type="audio/ogg" />
+        <p>你的浏览器不支持该音频，可点击<a href="assets/viper.mp3">此链接</a>收听。</p>
+    </audio>
+
+    <p>以下是使用iframe的内嵌B站视频</p>
+    <iframe src="https://player.bilibili.com/player.html?aid=19390801&bvid=BV1bW411n7fY&cid=31621681&page=1"
+        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+    </iframe>
+
+</body>
+
+</html>

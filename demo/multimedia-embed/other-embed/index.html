@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF内嵌学习</title>
+</head>
+
+<body>
+    <object id="pdfViewer" data="assets/关于在校生购买优惠火车票的通知.pdf" type="application/pdf" width="800" height="600">
+        <p>
+            You don't have a PDF plugin, but you can
+            <a href="assets/关于在校生购买优惠火车票的通知.pdf">download the PDF file. </a>
+        </p>
+    </object>
+
+    <!-- 设置为全屏显示PDF -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const pdfViewer = document.getElementById('pdfViewer');
+            pdfViewer.style.width = window.innerWidth + 'px';
+            pdfViewer.style.height = window.innerHeight + 'px';
+        });
+    </script>
+</body>
+
+</html>
