@@ -11,7 +11,7 @@
 
         html {
             font-family: 'Open Sans', sans-serif;
-            background: url(pattern.png);
+            background: url(assets/pattern.png);
         }
 
         body {
@@ -103,13 +103,16 @@
         <h1>Mozilla</h1>
         <!-- insert <img> element, link to the small
           version of the Firefox logo -->
-
+        <img src="assets/firefox-logo120.png" alt="小尺寸的火狐图标">
     </header>
 
     <main>
         <article>
-            <!-- insert iframe from youtube -->
-
+            <!-- insert iframe from BiliBili -->
+            <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=3303261&bvid=BV1rs411d7hC&cid=5221343&p=2"
+                scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="400"
+                height="225">
+            </iframe>
             <h2>Rocking the free web</h2>
 
             <p>Mozilla are a global community of technologists, thinkers, and builders, working together to keep the
@@ -128,22 +131,33 @@
         <div class="further-info">
             <!-- insert images with srcsets and sizes -->
             <a href="https://www.mozilla.org/en-US/firefox/new/">
-                <img>
+                <img srcset="assets/firefox-logo120.png 120w, 
+                        assets/firefox-logo400.png 400w" sizes="(max-width: 500px) 120px, 400px"
+                    src="assets/firefox-logo400.png" alt="Download Firefox" />
             </a>
             <a href="https://www.mozilla.org/">
-                <img>
+
+                <img srcset="assets/mozilla-dinosaur120.png 120w, 
+                        assets/mozilla-dinosaur400.png 400w" sizes="(max-width: 500px) 120px, 400px"
+                    src="assets/mozilla-dinosaur400.png" alt="Download Firefox" />
             </a>
             <a href="https://addons.mozilla.org/">
-                <img>
+                <img srcset="assets/firefox-addons120.jpg 120w, 
+                        assets/firefox-addons400.jpg 400w" sizes="(max-width: 500px) 120px, 400px"
+                    src="assets/firefox-addons400.jpg" alt="Download Firefox" />
             </a>
             <a href="https://developer.mozilla.org/en-US/">
-                <img>
+                <img src="assets/mdn.svg" role="img" alt="Learn web development with MDN">
             </a>
             <div class="clearfix"></div>
         </div>
 
         <div class="red-panda">
             <!-- insert picture element -->
+            <picture>
+                <source media="(max-width: 600px)" srcset=" assets/red-panda-portrait-small.jpg">
+                <img src="assets/red-panda-landscape.jpg" alt="a red panda">
+            </picture>
         </div>
 
     </main>
